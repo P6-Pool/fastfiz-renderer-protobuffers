@@ -1,5 +1,9 @@
 syntax = "proto2";
 import "google/protobuf/empty.proto";
+package protobuf;
+option java_multiple_files = true;
+option java_package = "org.JPool.protobuf";
+option java_outer_classname = "ApiProtos";
 
 service JPoolAPI {
   rpc ShowShots (ShowShotsRequest) returns (google.protobuf.Empty) {}
@@ -42,6 +46,7 @@ enum ShotType {
   POCKET = 1;
   RAIL = 2;
   STRIKE = 3;
-  KISS = 4;
-  BALL_BOTH = 5;
+  KISS_LEFT = 4;
+  KISS_RIGHT = 5;
+  BALL_BOTH = 6;
 }
