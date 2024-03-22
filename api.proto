@@ -39,6 +39,7 @@ message Shot {
   optional Point rightMost = 7;
   optional int32 b1 = 8;
   optional int32 b2 = 9;
+  required int32 id = 10;
 }
 
 enum ShotType {
