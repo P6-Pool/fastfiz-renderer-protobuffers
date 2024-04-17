@@ -20,10 +20,12 @@ message ShowGameRequest {
 }
 
 message GameTurn {
-    required string agentName = 1;
-    required TableState tableState = 2;
-    required GameShot gameShot = 3;
-    required string shotResult = 4;
+    required string turnType = 1;
+    required string agentName = 2;
+    required TableState tableStateBefore = 3;
+    required TableState tableStateAfter = 4;
+    required GameShot gameShot = 5;
+    required string shotResult = 6;
 }
 
 message GameShot {
