@@ -7,7 +7,7 @@ option java_outer_classname = "ApiProtos";
 
 service CueCanvasAPI {
   rpc ShowShots (ShowShotsRequest) returns (google.protobuf.Empty) {}
-  rpc ShowGame (ShowGameRequest) returns (google.protobuf.Empty) {}
+  rpc ShowGames (ShowGamesRequest) returns (google.protobuf.Empty) {}
 }
 
 message ShowShotsRequest {
@@ -15,8 +15,12 @@ message ShowShotsRequest {
   repeated Shot shots = 2;
 }
 
-message ShowGameRequest {
-  repeated GameTurn turnHistory = 1;
+message ShowGamesRequest {
+  repeated Game games = 1;
+}
+
+message Game {
+  repeated GameTurn turnHistory= 1;
 }
 
 message GameTurn {
